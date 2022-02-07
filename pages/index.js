@@ -9,7 +9,7 @@ export default function Home() {
   const [value, setValue] = useState('')
 
   const post = async (value) => {
-    fetch("/api/register", {
+    fetch("/api/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(value),
