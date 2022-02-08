@@ -1,8 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import data from "../data";
 import { useState } from "react";
+import {MDCRipple} from '@material/ripple';
+
+const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+  return new MDCRipple(el);
+});
 
 export default function Home() {
 
@@ -39,6 +45,9 @@ export default function Home() {
           >
             Press This
           </button>
+          <div class="mdc-card">
+            <p>dfsdfdsfd</p>
+</div>
 
         <p className={styles.description}>
           Get started by editing{" "}
